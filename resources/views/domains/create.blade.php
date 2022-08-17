@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <domain-component :domains='@json($domains)'></domain-component>
+    <form-component csrf-token="{{ csrf_token() }}"></form-component>
     <div class="row justify-content-center">
         <div class="col-md-8">
         </div>

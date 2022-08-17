@@ -7,7 +7,7 @@
       </b-nav>
     </b-card-header>
     <b-card-body class="text-center">
-      <b-button variant="primary">Adicionar Domínio</b-button>
+      <b-button href="create/" variant="primary">Adicionar Domínio</b-button>
     </b-card-body>
     <list-component :domains='items'></list-component>
   </b-card>

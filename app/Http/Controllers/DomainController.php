@@ -26,7 +26,7 @@ class DomainController extends Controller
      */
     public function create()
     {
-        //
+        return view('domains.create');
     }
 
     /**
@@ -37,7 +37,21 @@ class DomainController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try {
+            $domain = new Domain;
+            $domain->name = $request->name;
+            $domain->tld = $request->tld;
+            $domain->save();
+            return response()->json([
+                'msg' => 'Criado com sucesso!',
+                'state' => 'OK',
+            ]);
+        } catch (\Throwable $th) {
+            return response()->json([
+                'msg' => 'Erro ao criar',
+                'state' => 'ERRO',
+            ]);
+        }
     }
 
     /**
@@ -57,9 +71,10 @@ class DomainController extends Controller
      * @param  \App\Domain  $domain
      * @return \Illuminate\Http\Response
      */
-    public function edit(Domain $domain)
+    public function edit($id)
     {
-        
+        $domains = Domain::findorFail($id);
+        return view('domains.edit', compact('domains'));    
     }
 
     /**
@@ -82,6 +97,17 @@ class DomainController extends Controller
      */
     public function destroy(Domain $domain)
     {
-        //
+        try {
+            Domain::findorFail($id)->delete();
+            return response()->json([
+                'msg' => 'Deletado com sucesso!',
+                'state' => 'OK',
+            ]);
+        } catch (\Throwable $th) {
+            return response()->json([
+                'msg' => 'Erro ao deletar',
+                'state' => 'ERRO',
+            ]);
+        }
     }
 }
