@@ -28,5 +28,5 @@ Route::group(['prefix' => 'domains' ], function () {
     Route::post('/store', [DomainController::class, 'store'])->name('store');
     Route::get('/edit/{id}', [DomainController::class, 'edit'])->name('edit');
     Route::delete('/delete/{id}', [DomainController::class, 'destroy'])->name('delete');
-    Route::put('/update/{id}', [DomainController::class, 'update'])->name('update');
+    Route::put('edit/update/{id}', [DomainController::class, 'update'])->name('update');
 });

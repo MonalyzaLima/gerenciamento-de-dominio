@@ -73,8 +73,8 @@ class DomainController extends Controller
      */
     public function edit($id)
     {
-        $domains = Domain::findorFail($id);
-        return view('domains.edit', compact('domains'));    
+        $domain = Domain::findorFail($id);
+        return view('domains.edit', compact('domain'));    
     }
 
     /**
@@ -84,9 +84,21 @@ class DomainController extends Controller
      * @param  \App\Domain  $domain
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Domain $domain)
+    public function update(Request $request, $id)
     {
-        //
+        try {
+            $domain = Domain::find($id);
+            $domain->update($request->except('_token'));
+            return response()->json([
+                'msg' => 'Editado com sucesso!',
+                'state' => 'OK',
+            ]);
+        } catch (\Throwable $th) {
+            return response()->json([
+                'msg' => 'Erro ao editar',
+                'state' => 'ERRO',
+            ]);
+        }
     }
 
     /**

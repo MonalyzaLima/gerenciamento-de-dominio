@@ -35,6 +35,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('domain-component', require('./components/DomainComponent.vue').default);
 Vue.component('list-component', require('./components/ListComponent.vue').default);
 Vue.component('form-component', require('./components/FormComponent.vue').default);
+Vue.component('form-edit-component', require('./components/FormEditComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
