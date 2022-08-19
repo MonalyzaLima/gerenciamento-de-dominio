@@ -10,7 +10,7 @@ Gerenciamento de Domínio
 
 As tecnologias abaixo foram utilizadas para o desenvolvimento do projeto: 
 
-<img src="https://img.shields.io/static/v1?label=&message=PHP&color=black&style=for-the-badge&logo=PHP"/> <img src="https://img.shields.io/static/v1?label=&message=LARAVEL &color=black&style=for-the-badge&logo=LARAVEL"/> <img src="https://img.shields.io/static/v1?label=&message=vue.js &color=black&style=for-the-badge&logo=vue.js"/> <img src="https://img.shields.io/static/v1?label=&message=BOOTSTRAP &color=black&style=for-the-badge&logo=BOOTSTRAP"/> <img src="https://img.shields.io/static/v1?label=&message=JAVASCRIPT&color=black&style=for-the-badge&logo=JAVASCRIPT"/> <img src="https://img.shields.io/static/v1?label=&message=HTML &color=black&style=for-the-badge&logo=HTML"/>  <img src="https://img.shields.io/static/v1?label=&message=CSS &color=black&style=for-the-badge&logo=CSS3"/>  <img src="https://img.shields.io/static/v1?label=&message=MYSQL &color=black&style=for-the-badge&logo=MYSQL"/>  
+<img src="https://img.shields.io/static/v1?label=&message=PHP&color=black&style=for-the-badge&logo=PHP"/> <img src="https://img.shields.io/static/v1?label=&message=LARAVEL &color=black&style=for-the-badge&logo=LARAVEL"/> <img src="https://img.shields.io/static/v1?label=&message=vue.js &color=black&style=for-the-badge&logo=vue.js"/> <img src="https://img.shields.io/static/v1?label=&message=BOOTSTRAP &color=black&style=for-the-badge&logo=BOOTSTRAP"/> <img src="https://img.shields.io/static/v1?label=&message=JAVASCRIPT&color=black&style=for-the-badge&logo=JAVASCRIPT"/> <img src="https://img.shields.io/static/v1?label=&message=HTML5 &color=black&style=for-the-badge&logo=HTML5"/>  <img src="https://img.shields.io/static/v1?label=&message=CSS &color=black&style=for-the-badge&logo=CSS3"/>  <img src="https://img.shields.io/static/v1?label=&message=MYSQL &color=black&style=for-the-badge&logo=MYSQL"/>  
 
 > ## Funcionalidades
 
@@ -58,5 +58,7 @@ https://github.com/MonalyzaLima/gerenciamento-de-dominio.git
   # Cria todas as tabelas do banco de dados SQL
   $ php artisan migrate
   # Cria um servidor em sua localhost
+  # Compilar componentes vue.js 
+  $ npm run dev
 
 ```
